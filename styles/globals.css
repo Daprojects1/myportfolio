@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet');
+
+
+/* Change font to Jakarta font */
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Plus Jakarta Sans',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: rgb(255, 255, 237);
+    min-height: 100vh;
 }
 
 a {
@@ -11,16 +18,101 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  color: inherit;
+}
+
 * {
   box-sizing: border-box;
 }
 
+.navbar{
+  padding: 20px;
+  position: fixed;
+  width:90%;
+  max-width: 1300px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0;
+  right: 0;
+  background:rgb(255, 255, 237) ;
+  z-index: 3;
+}
+
+.navbar ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li{
+  cursor: pointer;
+  padding: 5px;
+}
+
+.navbar li:hover{
+  border-radius: 5px;
+  color: #eb7565;
+}
+.body-layout{
+  width:90%;
+  max-width: 1300px;
+  min-height: 100vh;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+
+.appButton{
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  background-color: #eb7565;
+  color: white;
+  margin: 50px auto;
+}
+
+.appButton:hover{
+  background: inherit;
+  border: 1px solid #eb7565;
+  color: black;
+  cursor: pointer;
+}
+
+.navigation{
+  background: #FFFFED;
+}
+
+.navigation a{
+  color: black !important;
+}
+
+@media screen and (min-width:600px){
+  .navbar ul{
+    justify-content: flex-end;
+    gap: 30px;
+  }
+
+  .navbar li{
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width:950px){
+}
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
   }
   body {
     color: white;
     background: black;
-  }
+  } */
 }
