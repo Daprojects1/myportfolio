@@ -97,8 +97,16 @@ cursor: pointer;
   font-size: 10px;
   cursor: pointer;
 }
+
+.cvSvgColor {
+  color: #eb7565;
+}
 .leftNav{
   left: 0;
+}
+
+.leftNav a{
+  display: block;
 }
 
 .rightNav{

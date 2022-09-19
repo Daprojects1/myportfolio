@@ -19,6 +19,14 @@ const Layout = ({ children }) => {
     setCurrentPage(page);
   };
 
+  const handleMouseOver = () => {
+    document?.querySelector(".cvSvg")?.classList.add("cvSvgColor");
+  };
+
+  const handleMouseLeave = () => {
+    document.querySelector(".cvSvg")?.classList.remove("cvSvgColor");
+  };
+
   if (!isLoaded) return null;
   return (
     <div className="body-layout">
@@ -27,13 +35,15 @@ const Layout = ({ children }) => {
           onClick={() => router.push("https://github.com/daprojects1")}
         />
         <a href="/myCv.docx" download>
-          <FaFile
-            onClick={() => {
-              console.log("yeah");
-            }}
-          />
+          <FaFile className="cvSvg" />
         </a>
-        <span className="file-id">CV</span>
+        <span
+          className="file-id"
+          onClick={() => window?.open("/myCv.docx")}
+          onMouseOver={handleMouseOver}
+          onMouseLeave={handleMouseLeave}>
+          CV
+        </span>
       </div>
       {children}
       <div className="footer"></div>
