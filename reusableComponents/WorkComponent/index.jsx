@@ -19,11 +19,18 @@ const WorkComponent = ({
   });
 
   return (
-    <div className="workComponent">
-      <AnimationOnScroll animateIn=" animate__fadeInLeft">
+    <div className="section workComponent">
+      <AnimationOnScroll
+        animateIn=" animate__fadeInLeft"
+        duration={0.5}
+        className="animation-class">
         <img src={src} alt="work image" />
       </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInRight">
+      <AnimationOnScroll
+        duration={0.5}
+        animateIn="animate__fadeInRight"
+        className="animation-class"
+        anim>
         <div className="content">
           <h2>{title}</h2>
           <div>{description}</div>

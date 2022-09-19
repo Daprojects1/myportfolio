@@ -11,7 +11,6 @@ const NavBarPage = ({ changeCurrentPage, currentPage }) => {
           ))}
         </ul>
       </div>
-      <div className="navbar-mobile"></div>
     </>
   );
 };

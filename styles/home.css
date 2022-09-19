@@ -4,57 +4,89 @@
     display: flex;
     flex-direction: column;
 }
+
+
+.home-page .section {
+    /* min-height: 100vh;            
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available; */
+    height: 100vh;
+    max-height: 750px;
+    position: relative;
+}
+
+
 /* SECTION ONE */
 .section-one{
     margin: 50px 0 10px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    height: 100vh;
+    gap: 30px;
     justify-content: center;
 }
 
+.scroll-down{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 50%;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+.scroll-down .main-slide{
+    color: #eb7565;
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+  }
+  
+  .scroll-down-arrow::before {
+    animation: bounce 1s ease infinite;
+    bottom: 20px;
+    color: black;
+    content: '╲╱';
+    font-size: 20px;
+    height: 20px;
+    left: 50%;
+    letter-spacing: -1px;
+    line-height: 4rem;
+    margin-left: -3rem;
+    opacity: 0.8;
+    position: absolute;
+    text-align: center;
+    width: 6rem;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: translateY(-50%);
+    }
+  }
+
 
 .round-image{
-    width: 300px;
-    height:300px;
+    width: 200px;
+    height:200px;
     border-radius: 50%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     /* animation that spreads out the bg colour */
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     position: relative;
-    animation-name: colorChange;
-    animation-duration: 5s;
 }
 
 
-/* WORK ON ANIMATION AND NAV NEXT  */
-@keyframes colorChange {
-    from {
-         width: 0;
-         height: 0;
-    }
-    to {
-        width: 300px;
-        height: 300px;
-    }
-  }
-
-
-.round-image img{
-    width: 200px;
-    height: 200px;
-    /* position: absolute;
-    bottom: 0; */
-    /* border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%; */
-}
 
 .section-one-text{
-    font-size: 16px;
     letter-spacing: 0.2px;
     display: flex;
     flex-direction: column;
@@ -63,12 +95,14 @@
 .section-one-text h2{
     max-width: 420px;
     margin: 0 auto;
+    font-size: 23px;
 }
 
 .section-one-text p{
     max-width: 420px;
     margin: 0 auto;
     color: #7a746e;
+    font-size: 15px;
 }
 
 
@@ -76,9 +110,10 @@
 
 /* SECTION TWO */
 .section-two{
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .section-two h2{
@@ -88,7 +123,7 @@
 
 
 .skills-body{
-    height: 80%;
+    height: 100%;
     width: 100%;
     /* padding:10px 50px 70px; */
     /* background: black;
@@ -98,15 +133,21 @@
     border-radius: 25px; */
     /* background: linear-gradient(to right bottom, rgba(255, 255, 237, 0.7), rgba(255, 255, 237, 0.3));
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    /* justify-content: center; */
+    position: relative;
 }
 
 .tools-section{
     /* margin-top: 50px; */
-    display: grid;
+    margin: 0 auto;
     gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 940px;
-    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 280px;
 }
 
 .tool-component{
@@ -120,22 +161,18 @@
     max-width: 70px;
 }
 .tool-component svg{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+}
+
+.directToProjects{
+    margin-bottom: 40px;
 }
 
 
-
-/* SECTION THREE */
-/* .section-three{
-    width: 100%;
-    min-height: 100vh;
-} */
-
-
+/* PROJECTS SECTION THREE */
 
 .workComponent{
-    height: 100vh;
     display: flex;
     /* border: 1px solid black; */
     flex-direction: column;
@@ -145,15 +182,20 @@
 }
 
 .workComponent img{
-    max-width: 250px;
+    max-width: 80%;
     max-height: 400px;
     object-fit: cover;
     border-radius: 25px; 
     background: linear-gradient(to right bottom, rgba(255, 255, 237, 0.7), rgba(255, 255, 237, 0.3));
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    align-self: center;
     /* border: 1px solid black; */
 }
 
+.animation-class{
+    display: flex;
+    justify-content: center;
+}
 
 .workComponent .content{
     max-width: 250px;
@@ -161,6 +203,7 @@
 
 .workComponent .content h2{
     margin-bottom: 20px;
+    color: #eb7565;
 }
 
 .workComponent .icons{
@@ -194,31 +237,124 @@
     margin: 0;
 }
 
+
+/* CONTACT SECTION */
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form{
+    width: 90%;
+    max-width: 600px;
+    background-color: black;
+    background: linear-gradient(to right bottom, rgba(255, 255, 237, 0.7), rgba(255, 255, 237, 0.3));
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    color: rgb(48, 47, 47);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form h2{
+    margin-bottom: 40px;
+    text-align: center;
+    /* text-decoration: underline;
+    text-decoration-color: #eb7565;
+    text-underline-offset: 10px; */
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-inputs input, .form-inputs textarea{
+    width: 100%;
+    background: inherit;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    /* background: black;
+    color: white; */
+    color: black;
+    background: rgb(255, 255, 237);
+    font-size: 13px;
+}
+
+.form-inputs input::placeholder, .form-inputs textarea::placeholder{
+    color: rgb(48, 47, 47);
+    font-size: 13px;
+}
+
+.namesInput{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 20px;
+}
+
+.form-inputs input:focus, .form-inputs textarea:focus{
+    outline: none;
+    border-color: #eb7565;
+}
+
+.form-inputs textarea{
+    height: 200px;
+    resize: none;
+}
+
+
+.contact-section-icons{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-section-icons .tool-component svg{
+    width: 50px;
+    height: 50px;
+}
+
+.contact-section-icons svg:hover{
+    color: #eb7565;
+}
+
+.contact-form button{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover{
+    /* color: white; */
+}
+
+
+.canvas-img{
+    display: none;
+}
+
+.footer{
+    height: 20px;
+    width: 100%;
+}
 /* Smaller screen sizes */
 @media screen and (max-width:400px){
     .round-image{
         width: 200px;
         height: 200px;
-        animation-name: colorChange;
-        animation-duration: 5s;
     }
 
-    @keyframes colorChange {
-        from {
-             width: 0;
-             height: 0;
-        }
-        to {
-            width: 200px;
-            height: 200px;
-        }
-      }
-
-    .round-image img{
-        width: 150px;
-        height: 150px;
-        
-    }
 
     .section-one-text h2{
         font-size: 20px;
@@ -230,13 +366,27 @@
         font-size: 21px;
     }
     .tools-section{
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tool-component svg{
+        width: 85px;
+        height: 85px;
+    }
+
+    .tools-section{
+        max-width: 340px;
     }
 
 }
 
 
 @media screen and (min-width:950px){
+    .home-page .section{
+        min-height: 800px;
+        max-height: 900px;
+    }
     .section-one{
         flex-direction: row;
         margin: 0 auto;
@@ -244,23 +394,26 @@
         align-items: center;
         gap: 150px;
     }
+
+    .section-one-text h2{
+        max-width: 420px;
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    
+    .section-one-text p{
+        font-size: 20px;
+
+    }
+
+    .scroll-down{
+        position: absolute;
+        bottom: 70px;
+    }
         .round-image{
         width: 400px;
         height: 400px;
-        animation-name: colorChange;
-        animation-duration: 5s;
     }
-
-    @keyframes colorChange {
-        from {
-             width: 0;
-             height: 0;
-        }
-        to {
-            width: 400px;
-            height: 400px;
-        }
-      }
 
     .round-image img{
         width: 350px;
@@ -270,7 +423,7 @@
         margin: unset;
     }
     .section-one-text p {
-        text-align: center;
+        /* text-align: center; */
     }
 
     .section-one-text{
@@ -279,14 +432,26 @@
 
     .section-two{
         margin-top: 0;
+        justify-content: center;
+        align-items: center;
     }
     .tools-section{
-        grid-template-columns: repeat(4, 0.5fr);
-        gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        max-width: 980px;
     }
     .tool-component svg{
         width: 100px;
         height: 100px;
+    }
+
+    .skills-body{
+        /* justify-content: center; */
+        margin-top: 50px;
+    }
+
+    .directToProjects{
+        margin-bottom: 0;
     }
 
     .workComponent{
@@ -298,9 +463,33 @@
         border-radius: 25px;
     }
 
-    .workComponent{
+
+    .contact-body{
+        gap: 100px;
 
     }
+    .canvas-img{
+        display: block;
 
+    }
+    .footer{
+        height: 0;
+    }
 
+    .contact-form{
+        padding: 40px;
+    }
+    .form-inputs input, .form-inputs textarea{
+        font-size: 15px;
+    }
+
+    .form-inputs input::placeholder, .form-inputs textarea::placeholder{
+        font-size: 15px;
+    }
+}
+
+@media screen and(max-height:700px){
+    .section-one{
+        flex-direction: row;
+    }
 }

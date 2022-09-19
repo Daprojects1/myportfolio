@@ -1,5 +1,6 @@
-import { useCallback } from 'react';
 import Layout from '../components/Layout'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "animate.css/animate.min.css";
 import '../styles/globals.css'
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
       }}
         options={tsConfig}
       /> */}
+      <ToastContainer/>
       <Component {...pageProps} />
     </Layout>
   )

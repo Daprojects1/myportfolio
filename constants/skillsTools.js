@@ -1,6 +1,7 @@
 import { FaCss3, FaGit, FaGithub, FaHtml5, FaJira, FaJs, FaNodeJs, FaNpm, FaReact, FaSass } from 'react-icons/fa'
 import { BsGear } from 'react-icons/bs'
 import { FcMultipleDevices} from 'react-icons/fc'
+import { SiGraphql} from 'react-icons/si'
 
 const skillsTools = [
   {
@@ -36,19 +37,22 @@ const skillsTools = [
     icon:<FaSass/>
   },
   {
-    title: 'Responsive Design',
+    title: 'Responsive',
     icon:<FcMultipleDevices/>
   }, {
     title: 'Node Js',
     icon:<FaNodeJs/>
   },
-  {
-    title: 'Jira',
-    icon:<FaJira/>
-  },
+  // {
+  //   title: 'Jira',
+  //   icon:<FaJira/>
+  // },
   {
     title: 'NPM',
     icon:<FaNpm/>
+  }, {
+    title: 'GRAPHQL',
+    icon:<SiGraphql/>
   }
 ]
 

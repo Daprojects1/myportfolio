@@ -1,16 +1,35 @@
+/* eslint-disable react/no-unknown-property */
 import AppButton from "../reusableComponents/AppButton";
 import ToolComponent from "../reusableComponents/ToolComponent";
 import skillsTools from "../constants/skillsTools";
 import projects from "../constants/projects";
 import WorkComponent from '../reusableComponents/WorkComponent'
+import ContactForm from "../components/ContactForm";
+import { Canvas, useFrame } from 'react-three-fiber'
+import Sphere from "../components/Sphere";
+import CanvasBody from '../components/Canvas'
+import Box from "../components/Box";
+import Head from "next/head";
 
 export default function Home() {
+  const changeCurrentPage = (e, page) => {
+    document?.getElementById(page)?.scrollIntoView();
+
+  };
+
   return (
+    <>
+      <Head>
+      <link rel='shortcut icon' href='codeSlash.svg'/>
+      </Head>
     <div className="home-page">
-      <div className="section-one" id="home">
+      <div className=" section section-one" id="home">
         <div className="image-container">
         <div className="round-image">
-          <img src="/peaceMemoji.png" alt="alternate image"/>
+            {/* <img src="/peaceMemoji.png" alt="alternate image"/> */}
+            <CanvasBody design={<Sphere/>}>
+            </CanvasBody>
+
         </div>
         </div>
         <div className="section-one-text">
@@ -18,12 +37,16 @@ export default function Home() {
           <p>{'I am a Front-End developer who enjoys working with others to build responsive and dynamic web apps.'}</p>
           <AppButton
             title={'Get in touch'}
-            onClick={''}
+            onClick={(e)=> changeCurrentPage(e,'getInTouch') }
             type='button'
           />
         </div>
+        <div className="scroll-down">
+          <div className="main-slide">Skills & Tools</div>
+          <span className="scroll-down-arrow"></span>
+        </div>
       </div>
-      <div className="section-two" id="skills">
+      <div className="section section-two" id="skills">
         <div className="skills-body">
           <h2>Skills & Tools</h2>
           <div className="tools-section">
@@ -32,18 +55,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
-      {/* <div className="section-three" id="work">
-        <div className="work-body">
-
+        <div className="scroll-down directToProjects">
+          <div className="main-slide">Projects</div>
+          <span className="scroll-down-arrow"></span>
         </div>
-      </div> */}
-      <WorkComponent
-        src='/smileE.png'
-        tools={['HTML5',  'Javascript','CSS3','React','Node Js','Rest APIs']}
-        title='Blog App'
-        description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.`}
-      />
+      </div>
       {projects?.map((p,i) => (
         <WorkComponent
           key={i}
@@ -55,7 +71,16 @@ export default function Home() {
           websiteUrl={p?.websiteUrl}
         />
       ))}
-      <p></p>
+      <div className="section contact-section" id="getInTouch">
+        <div className="contact-body">
+          <div class='canvas-img'>
+          <CanvasBody design={<Box/>}/>
+          </div>
+          <ContactForm />
+        </div>
+     
+      </div>
     </div>
+    </>
   )
 }
