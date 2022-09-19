@@ -206,6 +206,11 @@
     color: #eb7565;
 }
 
+.workComponent .content h2:hover{
+    color: black;
+    cursor: pointer;
+}
+
 .workComponent .icons{
     display: flex;
     margin-top: 20px;

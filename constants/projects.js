@@ -10,8 +10,6 @@ const template =
 
 
 const projects = [
-    // Rename the good tools.
-    // Blog App video as well. 
     {
         title: 'Outfts.com',
         src: '/outfts.gif',

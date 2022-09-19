@@ -18,6 +18,10 @@ const WorkComponent = ({
     return tools?.includes(t.title);
   });
 
+  const titleRoute = (websiteUrl) => {
+    if (websiteUrl) router.push(websiteUrl);
+  };
+
   return (
     <div className="section workComponent">
       <AnimationOnScroll
@@ -32,7 +36,7 @@ const WorkComponent = ({
         className="animation-class"
         anim>
         <div className="content">
-          <h2>{title}</h2>
+          <h2 onClick={() => titleRoute(websiteUrl)}>{title}</h2>
           <div>{description}</div>
           <div className="icons">
             {allTools?.map((t, i) => (
