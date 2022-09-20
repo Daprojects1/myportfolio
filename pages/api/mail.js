@@ -32,7 +32,8 @@ export default async function handler(req, res) {
       .send(mailOptions)
       .then(() => res.status(201).json({ message: 'Message sent !' }))
       .catch((err) => {
-        return res.status(404).json({ message: 'Sorry, something went wrong' })
+        console.log(err)
+        return res.status(404).json({ message: 'Sorry, something went wrong, please email davidrtm45@gmail.com',error:err })
       }) 
   }
   // res.status(200).json({ name: 'John Doe' })
