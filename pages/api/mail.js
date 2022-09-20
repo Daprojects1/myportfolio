@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     }
 
       
-    sendgrid.setApiKey(process.env.MAIL_KEY__MAIN)
+    sendgrid.setApiKey(process.env.MAIL__KEY__MAIN)
     
 
       const mailOptions = {
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
       .then(() => res.status(201).json({ message: 'Message sent !' }))
       .catch((err) => {
         console.log(err)
-        return res.status(404).json({ message: 'Sorry, something went wrong, please email davidrtm45@gmail.com',error:err })
+        return res.status(404).json({ message: 'Sorry, something went wrong, please email davidrtm45@gmail.comse',error:err })
       }) 
   }
   // res.status(200).json({ name: 'John Doe' })
