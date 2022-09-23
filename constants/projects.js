@@ -50,7 +50,7 @@ const projects = [
         description: `Battleship is a head to head game, in which you you search for the enemy's fleet of ships and destroy them one by one. It takes patience and strategy to come out successful against the AI !`,
         tools: ['HTML5', 'CSS3', 'Javascript'],
         codeUrl: 'https://github.com/Daprojects1/BattleShip-2',
-        websiteUrl:'https://bestsearch.netlify.app/'
+        websiteUrl:'https://daprojects1.github.io/BattleShip-2/'
     },
     // {
     //     title: '',
