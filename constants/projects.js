@@ -30,7 +30,7 @@ const projects = [
     {
         title: 'Search Engine',
         src: '/search-engine.gif',
-        description: 'A search engine that gets data from multiple Rest APIs to display different search results, including news and Images!',
+        description: 'A search engine that gets data from a rest API to display different search results, including news and Images!',
         tools: ['React', 'Rest APIs', 'CSS3', 'Javascript'],
         codeUrl: 'https://github.com/Daprojects1/search-engine',
         websiteUrl:'https://bestsearch.netlify.app/'
