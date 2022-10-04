@@ -13,7 +13,7 @@ const projects = [
     {
         title: 'Outfts.com',
         src: '/outfts.gif',
-        description: 'Some of my work for Outfts.com, where I developed user interfaces such as the site dashboard, instagram upload page etc.',
+        description: 'Some of my work for Outfts.com, where I developed user interfaces such as the logged in home dashboard, an instagram upload page etc.',
         tools: ['GRAPHQL','React', 'Rest APIs', 'CSS3', 'Javascript'],
         websiteUrl:'https://outfts.com'
     },
